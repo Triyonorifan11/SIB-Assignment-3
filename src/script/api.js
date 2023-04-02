@@ -30,4 +30,30 @@ async function getHistoryContry(country, date){
     return result;
 }
 
-export {getCountries, getHistoryContry}
+async function getStatistic(){
+    const ops = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': key,
+            'X-RapidAPI-Host': host
+        }
+    };
+    const response = await fetch(`${base_url}/statistics`, ops);
+    const result = await response.json()
+    return result;
+}
+
+async function getStatisticByCountry(country){
+    const ops = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': key,
+            'X-RapidAPI-Host': host
+        }
+    };
+    const response = await fetch(`${base_url}/statistics?country=${country}`, ops);
+    const result = await response.json()
+    return result;
+}
+
+export {getCountries, getHistoryContry, getStatistic, getStatisticByCountry}
