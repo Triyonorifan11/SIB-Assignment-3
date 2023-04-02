@@ -39,6 +39,7 @@ selectCountries.addEventListener('change', async function(e){
     totalcases.innerHTML = 'Loading...';
     totaldeaths.innerHTML = 'Loading...';
     totaltests.innerHTML = 'Loading...';
+    populasi.innerHTML = 'Loading...'
 
     const countryselect = selectCountries.value
     country.innerHTML = `- ${countryselect}`
