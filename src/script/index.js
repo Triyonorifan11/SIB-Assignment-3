@@ -3,12 +3,13 @@ import { format_date, loader, formatRibuan } from "./functions.js";
 
 const loading = document.getElementById('loader')
 loading.innerHTML = loader();
+const date = new Date();
+const today = document.getElementById('today')
+today.innerHTML = format_date(date)
 const countries = await getCountries();
 const dataCountries = countries.response;
 const selectCountries = document.getElementById('countries');
 const country = document.getElementById('country')
-const today = document.getElementById('today')
-const date = new Date();
 
 // number total
 const activecase = document.getElementById('active-case');
@@ -27,7 +28,7 @@ dataCountries.forEach(element => {
     `
 });
 
-today.innerHTML = format_date(date)
+
 
 
 selectCountries.addEventListener('change', async function(e){
