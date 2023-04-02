@@ -17,4 +17,17 @@ async function getCountries(){
     return result;
 }
 
-export {getCountries}
+async function getHistoryContry(country, date){
+    const ops = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': key,
+            'X-RapidAPI-Host': host
+        }
+    };
+    const response = await fetch(`${base_url}/history?country=${country}&day=${date}`, ops);
+    const result = await response.json()
+    return result;
+}
+
+export {getCountries, getHistoryContry}

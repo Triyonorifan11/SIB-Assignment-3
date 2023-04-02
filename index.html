@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 
-    
+
 </head>
 
 <body>
@@ -23,7 +23,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" id="today" aria-current="page" href="#"></a>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
     </header>
 
     <main class="container" id="maincontent">
-        <div class="row justify-content-center my-5">
+        <section class="row justify-content-center my-5">
             <div class="col-md-9">
                 <div class="card px-5 py-3 border-0 shadow">
                     <div class="card-body">
@@ -40,19 +40,130 @@
                                 <option disabled selected>Pilih Negara</option>
                             </select>
                         </form>
+                        <div class="" id="loader">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="row justify-content-center flex-wrap">
+            <div class="col-md-3 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center">
+                            <img src="src/assets/image/active-case.png" width="70%" alt="">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h4>Active Cases</h4>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h2 class="text-success fw-bold" id="active-case">0</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center">
+                            <img src="src/assets/image/new-case.png" width="70%" alt="">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h4>New Cases</h4>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h2 class="text-primary fw-bold" id="new-case">0</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center">
+                            <img src="src/assets/image/recovered-case.png" width="70%" alt="">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h4>Recovered Cases</h4>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h2 class="text-info fw-bold" id="recovered-case">0</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center">
+                            <img src="src/assets/image/total-case.png" width="70%" alt="">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h4>Total Cases</h4>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h2 class="text-primary fw-bold" id="total-cases">0</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center">
+                            <img src="src/assets/image/total-death.png" width="70%" alt="">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h4>Total Deaths</h4>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h2 class="text-danger fw-bold" id="total-deaths">0</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center">
+                            <img src="src/assets/image/total-test.png" width="70%" alt="">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h4>Total Tests</h4>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h2 class="text-primary fw-bold" id="total-tests">0</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center">
+                            <img src="src/assets/image/populasi.png" width="70%" alt="">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h4>Total Populasi</h4>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <h2 class="text-primary fw-bold" id="populasi">0</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-    crossorigin="anonymous"></script>
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
     <script src="src/script/index.js" type="module"></script>
 
-    
+
 </body>
 
 </html>
