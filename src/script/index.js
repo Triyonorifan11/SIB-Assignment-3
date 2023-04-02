@@ -44,7 +44,7 @@ selectCountries.addEventListener('change', async function(e){
     country.innerHTML = `- ${countryselect}`
     const today = `${date.getFullYear()}-0${date.getMonth()+1}-0${date.getDate()}`;
     const result = await getHistoryContry(countryselect, today);
-    console.log(result);
+    
     const history_country = result.response[0];
     const caseCountry = history_country.cases;
     const deathsCountry = history_country.deaths;
