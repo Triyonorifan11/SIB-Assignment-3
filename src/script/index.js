@@ -50,12 +50,12 @@ selectCountries.addEventListener('change', async function(e){
     const deathsCountry = history_country.deaths;
     const testsCountry = history_country.tests;
 
-    activecase.innerHTML = formatRibuan(caseCountry.active.toString());
-    newcase.innerHTML = caseCountry.new;
-    recoveredcase.innerHTML = formatRibuan(caseCountry.recovered.toString());
-    totalcases.innerHTML = formatRibuan(caseCountry.total.toString());
-    totaldeaths.innerHTML = `${formatRibuan(deathsCountry.total.toString())} (${deathsCountry.new})`;
-    totaltests.innerHTML = formatRibuan(testsCountry.total.toString());
-    populasi.innerHTML = formatRibuan(history_country.population.toString())
+    activecase.innerHTML = (caseCountry.active) ? formatRibuan(caseCountry.active.toString()) : 0;
+    newcase.innerHTML = (caseCountry.new) ? caseCountry.new : 0;
+    recoveredcase.innerHTML = (caseCountry.recovered) ? formatRibuan(caseCountry.recovered.toString()): 0;
+    totalcases.innerHTML = (caseCountry.total) ? formatRibuan(caseCountry.total.toString()) : 0;
+    totaldeaths.innerHTML = `${(deathsCountry.total) ? formatRibuan(deathsCountry.total.toString()) : 0} (${(deathsCountry.new)? deathsCountry.new : 0})`;
+    totaltests.innerHTML = (testsCountry.total) ? formatRibuan(testsCountry.total.toString()) : 0;
+    populasi.innerHTML = (history_country.population) ? formatRibuan(history_country.population.toString()) : 0;
     
 })
