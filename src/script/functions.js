@@ -9,6 +9,14 @@ function format_date(date) {
     return dateTemp.toLocaleDateString("id-ID", options);
 }
 
+function flashMessage(title, text, icon){
+    Swal.fire({
+        title,
+        text,
+        icon
+      })
+}
+
 const loader = () => `<div class="pt-4 mx-3 d-flex align-items-center">
 <strong>Loading Countries...</strong>
 <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
@@ -32,4 +40,4 @@ function formatRibuan(angka) {
     return rupiah;
 }
 
-export { format_date, loader, formatRibuan }
+export { format_date, loader, formatRibuan, flashMessage }
